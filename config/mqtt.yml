@@ -1,0 +1,26 @@
+default: &default
+  connection:
+    # host: 'a1lj4k5or5rvza-ats.iot.ap-southeast-2.amazonaws.com'
+    # port: 8883
+    # ssl: true
+    # cert_file: 'iot-related/659ad3944b-certificate.pem.crt'
+    # key_file: 'iot-related/659ad3944b-private.pem.key'
+    # ca_file: 'iot-related/AmazonRootCA1.pem'
+    # keep_alive: 60
+    # ack_timeout: 30
+    host: 172.17.0.2
+    port: 1883
+
+  topics:
+    data: 'space.spider.data'
+    status: 'space.spider.status'
+    wiki: 'space.spider.wiki'
+
+development:
+  <<: *default
+
+test:
+  <<: *default
+
+production:
+  <<: *default

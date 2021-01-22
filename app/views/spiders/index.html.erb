@@ -1,0 +1,41 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Spiders</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Container</th>
+      <th>Status</th>
+      <th>Image</th>
+      <th>Prefix</th>
+      <th>Frequency</th>
+      <th>Run info</th>
+      <th>Max memory</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @spiders.each do |spider| %>
+      <tr>
+        <td><%= spider.name %></td>
+        <td><%= spider.container_id %></td>
+        <td><%= spider.status %></td>
+        <td><%= spider.image_id %></td>
+        <td><%= spider.prefix %></td>
+        <td><%= spider.frequency %></td>
+        <td><%= spider.run_info %></td>
+        <td><%= spider.max_memory %></td>
+        <td><%= link_to 'Show', spider %></td>
+        <td><%= link_to 'Edit', edit_spider_path(spider) %></td>
+        <td><%= link_to 'Destroy', spider, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Spider', new_spider_path %>

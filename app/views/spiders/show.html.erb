@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @spider.name %>
+</p>
+
+<p>
+  <strong>Container:</strong>
+  <%= @spider.container_id %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @spider.status %>
+</p>
+
+<p>
+  <strong>Image:</strong>
+  <%= @spider.image_id %>
+</p>
+
+<p>
+  <strong>Prefix:</strong>
+  <%= @spider.prefix %>
+</p>
+
+<p>
+  <strong>Frequency:</strong>
+  <%= @spider.frequency %>
+</p>
+
+<p>
+  <strong>Run info:</strong>
+  <%= @spider.run_info %>
+</p>
+
+<p>
+  <strong>Max memory:</strong>
+  <%= @spider.max_memory %>
+</p>
+
+<%= link_to 'Edit', edit_spider_path(@spider) %> |
+<%= link_to 'Back', spiders_path %>

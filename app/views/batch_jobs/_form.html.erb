@@ -1,0 +1,42 @@
+<%= form_with(model: batch_job, local: true) do |form| %>
+  <% if batch_job.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(batch_job.errors.count, "error") %> prohibited this batch_job from being saved:</h2>
+
+      <ul>
+        <% batch_job.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :job_id %>
+    <%= form.text_field :job_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :count %>
+    <%= form.text_field :count %>
+  </div>
+
+  <div class="field">
+    <%= form.label :items %>
+    <%= form.text_field :items %>
+  </div>
+
+  <div class="field">
+    <%= form.label :status %>
+    <%= form.text_field :status %>
+  </div>
+
+  <div class="field">
+    <%= form.label :error_info %>
+    <%= form.text_field :error_info %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

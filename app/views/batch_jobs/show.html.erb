@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Job:</strong>
+  <%= @batch_job.job_id %>
+</p>
+
+<p>
+  <strong>Count:</strong>
+  <%= @batch_job.count %>
+</p>
+
+<p>
+  <strong>Items:</strong>
+  <%= @batch_job.items %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @batch_job.status %>
+</p>
+
+<p>
+  <strong>Error info:</strong>
+  <%= @batch_job.error_info %>
+</p>
+
+<%= link_to 'Edit', edit_batch_job_path(@batch_job) %> |
+<%= link_to 'Back', batch_jobs_path %>

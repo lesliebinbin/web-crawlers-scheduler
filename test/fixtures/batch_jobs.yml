@@ -1,0 +1,15 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  job_id: MyString
+  count: 
+  items: 
+  status: 
+  error_info: 
+
+two:
+  job_id: MyString
+  count: 
+  items: 
+  status: 
+  error_info: 

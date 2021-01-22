@@ -1,0 +1,16 @@
+default: &default
+  root: /mnt/another-disk/whole_project/all-spiders/products
+  black_list:
+    - 'Famous-Footwear'
+    - 'Wittnes'
+    - 'Chemist-Warehouse'
+
+
+development:
+  <<: *default
+
+test:
+  <<: *default
+
+production:
+  <<: *default

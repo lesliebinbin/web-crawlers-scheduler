@@ -1,0 +1,13 @@
+default: &default
+  url: 'unix:///var/docker.sock'
+  memory: 1
+  total: 12
+
+development:
+  <<: *default
+
+test:
+  <<: *default
+
+production:
+  <<: *default

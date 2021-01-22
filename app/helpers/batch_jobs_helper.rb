@@ -1,0 +1,2 @@
+module BatchJobsHelper
+end

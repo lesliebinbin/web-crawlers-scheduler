@@ -1,0 +1,41 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Batch Jobs</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Job</th>
+      <th>Count</th>
+      <th>Items</th>
+      <th>Status</th>
+      <th>Error info</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @batch_jobs.each do |batch_job| %>
+      <tr>
+        <td><%= batch_job.job_id %></td>
+        <td><%= batch_job.count %></td>
+        <td>
+            <ul>
+                <% bath_jobs.items do |item| %>
+                    <li><%= item %></li>
+                <% end %>
+            </ul>
+        </td>
+        <td><%= batch_job.status %></td>
+        <td><%= batch_job.error_info %></td>
+        <td><%= link_to 'Show', batch_job %></td>
+        <td><%= link_to 'Edit', edit_batch_job_path(batch_job) %></td>
+        <td><%= link_to 'Destroy', batch_job, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Batch Job', new_batch_job_path %>

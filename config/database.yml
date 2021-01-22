@@ -1,0 +1,37 @@
+default: &default
+  shop:
+    database: 'shop'
+    host: 'space.crzkaz0qkcwl.ap-southeast-2.rds.amazonaws.com'
+    password: 'gaohan1113'
+    username: 'root'
+    adapter: mysql2
+  mall:
+    database: 'mall'
+    host: 'space.crzkaz0qkcwl.ap-southeast-2.rds.amazonaws.com'
+    password: 'gaohan1113'
+    username: 'root'
+    adapter: mysql2
+  brand:
+    database: 'brand'
+    host: 'space.crzkaz0qkcwl.ap-southeast-2.rds.amazonaws.com'
+    password: 'gaohan1113'
+    username: 'root'
+    adapter: mysql2
+  admin:
+    database: 'admin'
+    host: 'space.crzkaz0qkcwl.ap-southeast-2.rds.amazonaws.com'
+    password: 'gaohan1113'
+    username: 'root'
+    adapter: mysql2
+
+
+
+
+development:
+  <<: *default
+
+test:
+  <<: *default
+
+production:
+  <<: *default

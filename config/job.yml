@@ -1,0 +1,12 @@
+default: &default
+  max_count: 100
+  timeout: 60
+
+development:
+  <<: *default
+
+test:
+  <<: *default
+
+production:
+  <<: *default
